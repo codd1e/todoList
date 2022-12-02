@@ -22,7 +22,7 @@ const UserItemPage = () => {
 
     const fetchTodos = async () => {
         try {
-            const response = await axios.get<ITodo[]>(`https://jsonplaceholder.typicode.com/users/${params.id}/todos?_limit=5`);
+            const response = await axios.get<ITodo[]>(`https://jsonplaceholder.typicode.com/users/${params.id}/todos`);
             setTodos(response.data);
         } catch (err){
             console.log(err)
